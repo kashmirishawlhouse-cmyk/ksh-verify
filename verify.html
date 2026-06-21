@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Authenticity Verified — Kashmiri Shawls House & Art Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:       #F5F1EB;
+  --card:     #FFFFFF;
+  --gold:     #9A7B3F;
+  --gold-l:   #B8963E;
+  --border:   #DDD5C8;
+  --border-g: rgba(154,123,63,0.4);
+  --text:     #000000;
+  --text-s:   #000000;
+  --text-m:   #000000;
+  --shadow:   0 2px 12px rgba(0,0,0,0.07);
+  --shadow-l: 0 6px 28px rgba(0,0,0,0.1);
+}
+html{font-size:16px}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Cormorant Garamond',Georgia,serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+
+/* ── HEADER ── */
+.header{
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  padding:24px 20px 18px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.header-logo{
+  width:100px;height:100px;
+  object-fit:contain;
+  margin:0 auto 10px;
+  border-radius:50%;
+  border:1px solid var(--border-g);
+  padding:6px;
+  background:var(--bg);
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+.header-logo:hover{transform:scale(1.03)}
+.brand-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:500;
+  color:var(--text);letter-spacing:0.01em;
+  line-height:1.2;margin-bottom:4px;
+}
+.brand-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.68rem;font-weight:700;
+  letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;
+}
+.header-rule{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.header-rule span{display:block;height:1px;width:50px;background:var(--border-g)}
+.header-rule em{font-style:normal;font-size:0.5rem;color:var(--gold)}
+
+/* ── BADGE ── */
+.badge-wrap{padding:16px 16px 10px;text-align:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--card);
+  border:1.5px solid #4a9a5a;
+  border-radius:100px;
+  padding:8px 18px 8px 10px;
+  box-shadow:0 2px 10px rgba(74,154,90,0.12);
+}
+.badge-icon{
+  width:26px;height:26px;
+  background:rgba(74,154,90,0.1);
+  border:1.5px solid rgba(74,154,90,0.45);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#2e7a3e;font-size:0.8rem;font-weight:700;
+}
+.badge-text{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.62rem;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#2e7a3e;
+}
+
+/* ── VIDEO (top of product card) ── */
+.video-top{
+  margin:0 auto 8px;
+  border-radius:10px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.video-top video{
+  width:100%;
+  max-height:300px;
+  object-fit:cover;
+  display:block;
+  background:#111;
+}
+
+/* ── PRODUCT CARD ── */
+.product-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  margin:0 auto 8px;
+  box-shadow:var(--shadow);
+}
+.serial-strip{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 16px;
+  background:rgba(154,123,63,0.06);
+  border-bottom:1px solid var(--border);
+  flex-wrap:wrap;gap:4px;
+}
+.serial-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.53rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold); font-weight:600;
+
+}
+.serial-val{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.78rem;font-weight:600;color:var(--text);
+  letter-spacing:0.06em;cursor:pointer;
+}
+.product-title{
+  padding:14px 16px 3px;
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:500;color:var(--text);line-height:1.2;
+}
+.product-cert{
+  padding:0 16px 13px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase; font-weight:600;
+  color:var(--gold);
+}
+
+/* ── GI SEAL ── */
+.gi-seal{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  margin:0 auto 8px;
+  box-shadow:var(--shadow);
+}
+.gi-badge-box{
+  background:var(--gold);color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.68rem;font-weight:700;
+  padding:4px 9px;border-radius:3px;flex-shrink:0;
+}
+.gi-text{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.62rem;font-weight:500;
+  color:var(--text-s);line-height:1.5;
+}
+
+/* ── SECTION DIVIDER ── */
+.sec{
+  display:flex;align-items:center;gap:10px;
+  margin:18px auto 8px;
+}
+.sec span{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.68rem;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);white-space:nowrap;
+}
+.sec::before,.sec::after{content:'';flex:1;height:1px;background:var(--border-g)}
+
+/* ── DATA TABLE ── */
+.dtable{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;overflow:hidden;
+  margin:0 auto 8px;
+  box-shadow:var(--shadow);
+}
+.dhead{
+  padding:10px 16px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.6rem;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(90deg,#2C2C2C,#444444);
+}
+.drow{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--border);
+}
+.drow:last-child{border-bottom:none}
+.drow:nth-child(even){background:rgba(154,123,63,0.03)}
+.dkey{
+  padding:11px 14px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.68rem;font-weight:500;
+  color:var(--text-s);
+  border-right:1px solid var(--border);
+  line-height:1.4;
+}
+.dval{
+  padding:11px 14px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:500;
+  color:var(--text);line-height:1.4;
+}
+
+/* ── IMAGES SIDE BY SIDE ── */
+.img-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:0 auto 8px;
+}
+.img-col{display:flex;flex-direction:column;gap:8px}
+.img-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.58rem;font-weight:650;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);text-align:center;
+}
+.img-frame{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;overflow:hidden;
+  box-shadow:var(--shadow-l);
+  cursor:pointer;
+  position:relative;
+  height:380px;
+  transition:box-shadow 0.3s,transform 0.25s;
+}
+.img-frame:hover{
+  box-shadow:0 10px 36px rgba(0,0,0,0.14);
+  transform:translateY(-2px);
+}
+.img-frame img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.img-hint{
+  position:absolute;bottom:8px;right:8px;
+  background:rgba(28,28,28,0.55);color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.48rem;letter-spacing:0.1em;text-transform:uppercase;
+  padding:3px 9px;border-radius:100px;
+  pointer-events:none;
+}
+
+/* ── VIDEO SECTION (bottom) ── */
+.video-wrap{
+  margin:0 auto 8px;
+  border-radius:10px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-l);
+  background:#111;
+}
+.video-wrap video{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* ── DESCRIPTION ── */
+.desc{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px;
+  margin:0 auto 8px;
+  box-shadow:var(--shadow);
+}
+.desc p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:650;
+  color:var(--text);line-height:1.85;
+}
+
+/* ── CARE ── */
+.care{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:4px 16px 12px;
+  margin:0 auto 8px;
+  box-shadow:var(--shadow);
+}
+.care-row{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:9px 0;
+  border-bottom:1px solid var(--border);
+}
+.care-row:last-of-type{border-bottom:none}
+.care-dot{color:var(--gold);font-size:0.5rem;margin-top:6px;flex-shrink:0}
+.care-row span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:650;
+  color:var(--text-s);line-height:1.6;
+}
+.disclaimer{
+  margin-top:10px;padding-top:10px;
+  border-top:1px solid var(--border);
+  font-family:'Montserrat',sans-serif;
+  font-size:0.62rem;color:var(--text-s);
+}
+.disclaimer strong{color:var(--text)}
+
+/* ── CERT BLOCK ── */
+.cert{
+  background:var(--card);
+  border:1px solid var(--border-g);
+  border-radius:10px;
+  padding:24px 20px;
+  margin:0 auto 8px;
+  text-align:center;
+  box-shadow:var(--shadow-l);
+  position:relative;overflow:hidden;
+}
+.cert::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.cert-orn{color:var(--gold);opacity:0.5;font-size:0.65rem;letter-spacing:0.1em;display:block;margin-bottom:14px}
+.cert p{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:400;
+  color:var(--text);line-height:1.8;
+}
+.cert p em{font-style:italic;color:var(--gold)}
+.cert-serial{
+  margin-top:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.58rem;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);
+}
+
+/* ── FOOTER ── */
+.footer{
+  margin-top:24px;
+  padding:32px 20px 28px;
+  text-align:center;
+  background:var(--text);
+}
+.footer-rule{
+  width:60px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:0 auto 20px;
+}
+.footer-brand{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:500;
+  color:#F5F0E8;margin-bottom:8px;
+  letter-spacing:0.02em;
+}
+.footer-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.6rem;font-weight:500;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.footer-instagram{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.65rem;font-weight:600;
+  letter-spacing:0.12em;
+  color:#F5F0E8;opacity:0.7;
+  margin-bottom:20px;
+  display:block;
+}
+.footer-note{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.5rem;letter-spacing:0.08em;
+  color:#F5F0E8;opacity:0.35;
+  text-transform:uppercase;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox{
+  display:none;position:fixed;inset:0;z-index:9999;
+  background:rgba(0,0,0,0.88);
+  align-items:center;justify-content:center;
+  padding:16px;
+}
+.lightbox.open{display:flex}
+.lightbox img{
+  max-width:92vw;max-height:88vh;
+  width:auto;height:auto;
+  object-fit:contain;border-radius:6px;
+  display:block;margin:auto;
+}
+.lb-close{
+  position:fixed;top:14px;right:14px;
+  width:36px;height:36px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:50%;color:#fff;
+  font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  z-index:10000;transition:background 0.2s;
+}
+.lb-close:hover{background:rgba(255,255,255,0.25)}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:22px;left:50%;
+  transform:translateX(-50%) translateY(70px);
+  background:var(--gold);color:#fff;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.62rem;font-weight:600;letter-spacing:0.08em;
+  padding:9px 20px;border-radius:100px;
+  transition:transform 0.3s;pointer-events:none;
+  white-space:nowrap;z-index:9999;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .img-grid{grid-template-columns:1fr;gap:20px}
+  .img-frame{height:260px}
+  .brand-name{font-size:1.2rem}
+  .drow{grid-template-columns:1fr}
+  .dkey{border-right:none;border-bottom:1px solid var(--border);padding-bottom:3px;font-size:0.62rem}
+  .dval{padding-top:4px}
+  .wrap{padding:0 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="images/logo.jpeg" class="header-logo" alt="KSH Logo" onclick="openLightbox('images/logo.jpeg')"/>
+  <div class="brand-name">Kashmiri Shawls House &amp; Art Gallery</div>
+  <div class="brand-sub">Authenticity Verification</div>
+  <div class="header-rule"><span></span><em>◆</em><span></span></div>
+</div>
+
+<!-- BADGE -->
+<div class="badge-wrap">
+  <div class="badge">
+    <div class="badge-icon">✓</div>
+    <span class="badge-text">Verified Genuine Product</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- VIDEO TOP -->
+  <div class="video-top">
+    <video src="images/Shawl.mp4.mp4" autoplay loop muted playsinline></video>
+  </div>
+
+  <!-- PRODUCT CARD -->
+  <div class="product-card">
+    <div class="serial-strip">
+      <span class="serial-label">Serial No.</span>
+      <span class="serial-val" onclick="copySerial()">AU/3936/GI/48/28 &nbsp;⧉</span>
+    </div>
+    <div class="product-title">Sui Jama Kashmiri Embroidered Shawl</div>
+    <div class="product-cert">Handmade &nbsp;·&nbsp; GI Certified Genuine Product</div>
+  </div>
+
+  <!-- GI SEAL -->
+  <div class="gi-seal">
+    <div class="gi-badge-box">GI</div>
+    <div class="gi-text">Geographical Indication Certified &nbsp;·&nbsp; CDI Govt. of Jammu &amp; Kashmir, India</div>
+  </div>
+
+  <!-- FABRIC -->
+  <div class="sec"><span>Fabric &amp; Construction</span></div>
+  <div class="dtable">
+    <div class="dhead">Fabric Details</div>
+    <div class="drow"><div class="dkey">Fabric Composition</div><div class="dval">Cashmere</div></div>
+    <div class="drow"><div class="dkey">Yarn Spinning</div><div class="dval">Machine Spun</div></div>
+    <div class="drow"><div class="dkey">Fabric Weave</div><div class="dval">Hand</div></div>
+    <div class="drow"><div class="dkey">Embroidery Yarn</div><div class="dval">Staple</div></div>
+  </div>
+
+  <!-- SPECS -->
+  <div class="sec"><span>Product Specifications</span></div>
+  <div class="dtable">
+    <div class="dhead">Design &amp; Dimensions</div>
+    <div class="drow"><div class="dkey">Design</div><div class="dval">Hashidar</div></div>
+    <div class="drow"><div class="dkey">Size</div><div class="dval">40 × 80 inch</div></div>
+    <div class="drow"><div class="dkey">Weight</div><div class="dval">188 g</div></div>
+    <div class="drow"><div class="dkey">Embroidery</div><div class="dval">Hand</div></div>
+  </div>
+
+  <!-- GI INFO -->
+  <div class="sec"><span>GI Registration</span></div>
+  <div class="dtable">
+    <div class="dhead">Authorized GI Information</div>
+    <div class="drow"><div class="dkey">Authorized GI User</div><div class="dval">Saad Farooq Jan</div></div>
+    <div class="drow"><div class="dkey">Address of Authorized GI User</div><div class="dval">Alamgari Bazar, Srinagar 190011</div></div>
+    <div class="drow"><div class="dkey">Artisan / Weaver</div><div class="dval">***</div></div>
+    <div class="drow"><div class="dkey">Address of Artisan</div><div class="dval">*** *** 190011</div></div>
+  </div>
+
+  <!-- IMAGES -->
+  <div class="sec"><span>Gallery</span></div>
+  <div class="img-grid">
+    <div class="img-col">
+      <div class="img-label">Product Image</div>
+      <div class="img-frame" onclick="openLightbox('images/shawl.jpg')">
+        <img src="images/shawl.jpg" alt="Shawl"/>
+        <span class="img-hint">Tap to enlarge</span>
+      </div>
+    </div>
+    <div class="img-col">
+      <div class="img-label">Certification of Authenticity</div>
+      <div class="img-frame" onclick="openLightbox('images/certificate.jpeg')">
+        <img src="images/certificate.jpeg" alt="GI Certificate"/>
+        <span class="img-hint">Tap to enlarge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO BOTTOM -->
+  <div class="sec"><span>Product Video</span></div>
+  <div class="video-wrap">
+    <video src="images/Shawl.mp4.mp4" controls></video>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="sec"><span>About This Craft</span></div>
+  <div class="desc">
+    <p>Fine Needlework done by Hand on various fabrics, done by a Sozankar employing predominantly the Sozani Stitch, Darn Stitch and Stem Stitch using silk and viscose yarns. Buttonhole stitch, Herring bone stitch, Chain stitch, Satin Stitch and Knot stitches are also used, though in limited proportions.</p>
+  </div>
+
+  <!-- CARE -->
+  <div class="sec"><span>Care Instructions</span></div>
+  <div class="care">
+    <div class="care-row"><span class="care-dot">◆</span><span>Dry clean is preferable</span></div>
+    <div class="care-row"><span class="care-dot">◆</span><span>No machine wash — can be hand washed in cold water</span></div>
+    <div class="care-row"><span class="care-dot">◆</span><span>Avoid excessive squeezing</span></div>
+    <div class="care-row"><span class="care-dot">◆</span><span>Dry in shade</span></div>
+    <div class="care-row"><span class="care-dot">◆</span><span>Do not iron on label</span></div>
+    <div class="care-row"><span class="care-dot">◆</span><span>Use natural moth repellents for storage</span></div>
+    <div class="disclaimer"><strong>Disclaimer:</strong> Hand Spun Yarn is Superior To Machine Made Yarn.</div>
+  </div>
+
+  <!-- CERT BLOCK -->
+  <div class="sec"><span>Certification</span></div>
+  <div class="cert">
+    <span class="cert-orn">◆ ── ◆ ── ◆</span>
+    <p>
+      Tested, Certified and Labeled at<br/>
+      <em>Pashmina Testing &amp; Quality Certification Centre,</em><br/>
+      CDI Govt. of Jammu &amp; Kashmir, India.
+    </p>
+    <div class="cert-serial">Serial No. &nbsp; AU/3936/GI/48/28</div>
+    <span class="cert-orn" style="margin-top:14px;margin-bottom:0">◆ ── ◆ ── ◆</span>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-rule"></div>
+  <div class="footer-brand">Kashmiri Shawls House &amp; Art Gallery</div>
+  <div class="footer-sub">Authentic Kashmir &nbsp;◆&nbsp; Est. Kashmir, India</div>
+  <a href="https://instagram.com/kashmirishawlshouse" target="_blank" class="footer-instagram">@kashmirishawlshouse</a>
+  <div class="footer-note">This verification page is generated per product for authenticity purposes only.</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lb-img" src="" alt="Preview"/>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Serial number copied</div>
+
+<script>
+function copySerial(){
+  navigator.clipboard?.writeText('AU/3936/GI/48/28').then(()=>{
+    const t=document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2000);
+  });
+}
+function openLightbox(src){
+  const lb=document.getElementById('lightbox');
+  const img=document.getElementById('lb-img');
+  img.src='';
+  setTimeout(()=>{img.src=src},30);
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+</script>
+</body>
+</html>
